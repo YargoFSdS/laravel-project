@@ -13,6 +13,6 @@
         <a href="{{route('posts.show',$post->id)}}">Ver</a>
         <a href="{{route('posts.edit',$post->id)}}">Editar</a>
     </p> 
-    
-    
+<hr>    
 @endforeach
+{{$posts->links()}}  
