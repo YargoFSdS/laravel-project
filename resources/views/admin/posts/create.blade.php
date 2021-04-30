@@ -11,8 +11,8 @@
 
 <form action="{{route('posts.store')}}" method="POST">
     @csrf
-    <input type="text" name="title" id="title" placeholder="Título" value="{{@old('title')}}">
-    <textarea name="content" id="content" placeholder="Conteúdo">{{@old('content')}}</textarea>
+    <input type="text" name="title" id="title" placeholder="TÃ­tulo" value="{{@old('title')}}">
+    <textarea name="content" id="content" placeholder="ConteÃºdo">{{@old('content')}}</textarea>
     <button type="submit"> Enviar </button>
 
 </form>

@@ -30,7 +30,9 @@ class PostController extends Controller
             'content' => $request->content,
             'image'   => 'semimagem.jpg'
         ]);*/
-        return redirect()->route('posts.index');
+        return redirect()
+            ->route('posts.index')
+            ->with('message', 'Post Criado com Sucesso');
     }
 
     public function show($id)
@@ -50,5 +52,26 @@ class PostController extends Controller
         return redirect()
             ->route('posts.index')
             ->with('message', 'Post Deletado com Sucesso');
+    }
+
+    public function edit($id)
+    {
+        if (!$post = Post::find($id))
+            return redirect()->back();
+
+        return view('admin.posts.edit', compact('post'));
+    }
+
+    public function update(StoreUpdatePost $request, $id)
+    {
+
+        if (!$post = Post::find($id))
+            return redirect()->back();
+
+        $post->update($request->all());
+
+        return redirect()
+            ->route('posts.index')
+            ->with('message', 'Post Alterado com Sucesso');
     }
 }
