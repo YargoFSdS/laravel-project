@@ -10,4 +10,13 @@ class FlyController extends Controller
     {
         return view('admin.flies.create');
     }
+
+    public function store(StoreUpdatePost $request)
+    {
+        Post::create($request->all());        
+        return redirect()
+            ->route('posts.index')
+            ->with('message', 'Vôo Cadastrado com Sucesso');
+    }
+
 }
