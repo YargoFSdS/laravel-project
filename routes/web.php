@@ -24,6 +24,7 @@ Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store');
 
 Route::get('/criar', [FlyController::class, 'create'])->name('criar');
+Route::post('/fly/store', [FlyController::class, 'store'])->name('fly.store');
 
 Route::get('/', function () {
     return view('admin.flies.create');

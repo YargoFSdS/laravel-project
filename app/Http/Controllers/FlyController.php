@@ -2,21 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Fly;
 use Illuminate\Http\Request;
 
 class FlyController extends Controller
+
 {
     public function create()
     {
         return view('admin.flies.create');
     }
 
-    public function store(StoreUpdatePost $request)
+    public function store(Request $request)
     {
-        Post::create($request->all());        
+
+        Fly::create($request->all());
         return redirect()
             ->route('posts.index')
             ->with('message', 'Vôo Cadastrado com Sucesso');
     }
-
 }

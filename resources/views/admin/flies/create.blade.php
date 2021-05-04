@@ -18,7 +18,7 @@
     </div>
 @endif
 
-<form action="{{route('posts.store')}}" method="POST">
+<form action="{{route('fly.store')}}" method="POST">
     @csrf
     <h3>Passageiro </h3>
     <div class="row">
