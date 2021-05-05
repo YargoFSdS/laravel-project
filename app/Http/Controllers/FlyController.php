@@ -21,4 +21,8 @@ class FlyController extends Controller
             ->route('posts.index')
             ->with('message', 'Vôo Cadastrado com Sucesso');
     }
+
+    public function relatorio(){
+        return view('admin.flies.report');
+    }
 }

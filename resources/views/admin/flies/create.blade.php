@@ -82,6 +82,6 @@
 
     <hr> 
     <button type="submit" class="btn btn-success"> Enviar </button>
-    <button  class="btn btn-info"> Relatório </button>
+    <a  class="btn btn-info" href="{{route('fly.relatorio')}}"> Relatório </a>
 
 </form>
