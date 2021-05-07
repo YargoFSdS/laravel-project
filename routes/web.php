@@ -22,10 +22,6 @@ Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 Route::get('/posts/create', [PostController::class, 'create'])->name('posts.create');
 Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
 Route::post('/posts/store', [PostController::class, 'store'])->name('posts.store');
-
-Route::get('/criar', [FlyController::class, 'create'])->name('criar');
-Route::post('/fly/store', [FlyController::class, 'store'])->name('fly.store');
-Route::get('/relatorio',[FlyController::class ,'relatorio'])->name('fly.relatorio');
 Route::get('/', function () {
-    return view('admin.flies.create');
+    return view('welcome');
 });
