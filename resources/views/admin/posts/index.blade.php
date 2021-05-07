@@ -1,3 +1,7 @@
+@extends('admin.layouts.app')
+
+@section('title','Editar Post')
+
 <h3>Listagem</h3>
 <hr>
 <a href="{{route('posts.create')}}"> Cadastrar Post</a>
