@@ -9,5 +9,6 @@
 @endif
 @csrf   
 <input type="text" name="title" id="title" placeholder="Título" value="{{$post->title ?? old('title') }}">
-    <textarea name="content" id="content" placeholder="Conteúdo">{{$post->content ?? old('content') }}</textarea>
-    <button type="submit"> Enviar </button>
+<textarea name="content" id="content" placeholder="Conteúdo">{{$post->content ?? old('content') }}</textarea>
+<input type="file" name="image" id="imagem" >
+<button type="submit"> Enviar </button>
