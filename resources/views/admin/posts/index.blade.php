@@ -33,4 +33,3 @@
 @else
     {{ $posts->links() }}
 @endif
-{{$posts->links()}}  
