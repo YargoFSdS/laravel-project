@@ -38,4 +38,14 @@ class StoreUpdatePost extends FormRequest
         }
         return $rules;
     }
+
+    public function messages(){
+        return [
+            'title.required' => 'O título é obrigatório',
+            'title.min'      => 'O campo título deve conter ao menos 3 caracteres',
+            'title.max'      => 'O título é deve conter no máximo 160 caracteres',
+            'content.min'    => 'O conteúdo deve conter pelo menos 5 caracteres',
+            'image.required' => 'O campo imagem é obrigatório',
+        ];
+    }
 }
