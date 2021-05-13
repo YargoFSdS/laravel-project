@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\{
-    PostController
+    PostController,
+    FarmaciaController
 };
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +15,13 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/posts/{id}', [PostController::class, 'show'])->name('posts.show');
     Route::post('/posts', [PostController::class, 'store'])->name('posts.store');
     Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
+
+    /* Farmácias */
+    Route::get('/farmacias', [FarmaciaController::class, 'index'])->name('farmacias.index');
+    Route::get('/cadastrar-farmacia', [FarmaciaController::class, 'create'])->name('farmacias.create');
+    Route::post('/farmacias/store', [FarmaciaController::class, 'store'])->name('farmacias.store');
+    Route::get('/farmacias/{id}', [FarmaciaController::class, 'show'])->name('farmacias.show');
+    Route::get('/farmacias/edit/{id}', [PostControFarmaciaControllerller::class, 'edit'])->name('farmacias.edit');
 });
 
 Route::get('/dashboard', function () {
@@ -23,5 +31,8 @@ Route::get('/dashboard', function () {
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
 
 require __DIR__.'/auth.php';
