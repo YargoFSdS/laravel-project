@@ -2,7 +2,8 @@
 
 use App\Http\Controllers\{
     PostController,
-    FarmaciaController
+    FarmaciaController,
+    ProdutoController
 };
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/farmacias/store', [FarmaciaController::class, 'store'])->name('farmacias.store');
     Route::get('/farmacias/{id}', [FarmaciaController::class, 'show'])->name('farmacias.show');
     Route::get('/farmacias/edit/{id}', [PostControFarmaciaControllerller::class, 'edit'])->name('farmacias.edit');
+
+    /* Produtos */
+    Route::any('/produtos/search', [ProdutoController::class, 'search'])->name('produtos.search');
+    Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos.index');
+    Route::get('/cadastrar-produto', [ProdutoController::class, 'create'])->name('produtos.create');
 });
 
 Route::get('/dashboard', function () {

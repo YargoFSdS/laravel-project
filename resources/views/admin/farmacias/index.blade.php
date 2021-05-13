@@ -42,7 +42,7 @@
         <td>{{$farmacia->bairro}}</td>
         <td>{{$farmacia->cidade}}</td>
         <td>{{$farmacia->gerente}}</td>
-        <td>(21) 9952-4232</td>
+        <td>{{$farmacia->telefone}}</td>
         </tr>
         @endforeach
     </tbody>
