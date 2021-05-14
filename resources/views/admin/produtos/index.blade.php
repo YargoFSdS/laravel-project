@@ -26,6 +26,7 @@
 <table class="table-auto" style="width:100%;">
     <thead>
         <tr>
+        <th class="text-left">Imagem</th>
         <th class="text-left">Descrição</th>
         <th class="text-left">Preço</th>
         <th class="text-left">Desconto</th>
@@ -35,10 +36,11 @@
     <tbody>
         @foreach ($produtos as $p)
         <tr>
+        <td></td>
         <td>{{$p->descricao}}</td>
         <td>{{$p->preco}}</td>
         <td>{{$p->desconto}}</td>
-        <td>{{$p->categorias_id}}</td>
+        <td>{{$p->desc_categoria}}</td>
         </tr>
         @endforeach
     </tbody>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Produto;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 class ProdutoController extends Controller
 {
     /**
@@ -14,7 +14,13 @@ class ProdutoController extends Controller
      */
     public function index()
     {
-        $produtos = Produto::orderBy('id','DESC')->paginate(2);
+
+        //$produtos = Produto::orderBy('id','DESC')->paginate(2);
+        $produtos = DB::table('produtos')
+            ->join('categorias', 'produtos.categorias_id', '=', 'categorias.id')
+            ->select('produtos.*', 'categorias.descricao as desc_categoria')
+            ->paginate(2);
+
         return view('admin.produtos.index', [
             'produtos' => $produtos
         ]);
