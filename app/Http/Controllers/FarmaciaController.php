@@ -89,4 +89,16 @@ class FarmaciaController extends Controller
     {
         //
     }
+
+    public function search(Request $request)
+    {
+        $filters = $request->except('_token');
+
+        $farmacias = Farmacia::where('filial', 'LIKE', "%{$request->search}%")->paginate(2);
+
+        return view('admin.farmacias.index', [
+            'farmacias' => $farmacias
+        ]);
+        
+    }
 }

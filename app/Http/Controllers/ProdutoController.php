@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Produto;
+use App\Models\Categoria;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 class ProdutoController extends Controller
 {
     /**
@@ -33,7 +36,10 @@ class ProdutoController extends Controller
      */
     public function create()
     {
-        //
+        
+        $categorias = Categoria::get();
+
+        return view('admin.produtos.create',['categorias' => $categorias]);
     }
 
     /**
@@ -44,7 +50,21 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+
+        if ($request->image->isValid()) {
+
+            $fileName = Str::of($request->descricao)->slug('-') . '.' .$request->image->getClientOriginalExtension();
+
+            $image = $request->image->storeAs('produtos', $fileName);
+            $data['imagem'] = $image;
+        }
+
+        Produto::create($data);
+
+        return redirect()
+                ->route('produtos.index')
+                ->with('message', 'Farmácia criada com sucesso');
     }
 
     /**
@@ -90,5 +110,16 @@ class ProdutoController extends Controller
     public function destroy(Produto $produto)
     {
         //
+    }
+
+    public function search(Request $request)
+    {
+        $filters = $request->except('_token');
+
+        $produtos = Produto::where('descricao', 'LIKE', "%{$request->search}%")->paginate(2);
+        
+        return view('admin.produtos.index', [
+            'produtos' => $produtos
+        ]);
     }
 }

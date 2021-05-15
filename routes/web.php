@@ -18,6 +18,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 
     /* Farmácias */
+    Route::any('/farmacias/search', [FarmaciaController::class, 'search'])->name('farmacias.search');
     Route::get('/farmacias', [FarmaciaController::class, 'index'])->name('farmacias.index');
     Route::get('/cadastrar-farmacia', [FarmaciaController::class, 'create'])->name('farmacias.create');
     Route::post('/farmacias/store', [FarmaciaController::class, 'store'])->name('farmacias.store');
@@ -28,6 +29,7 @@ Route::middleware(['auth'])->group(function () {
     Route::any('/produtos/search', [ProdutoController::class, 'search'])->name('produtos.search');
     Route::get('/produtos', [ProdutoController::class, 'index'])->name('produtos.index');
     Route::get('/cadastrar-produto', [ProdutoController::class, 'create'])->name('produtos.create');
+    Route::post('/produtos/store', [ProdutoController::class, 'store'])->name('produtos.store');
 });
 
 Route::get('/dashboard', function () {

@@ -9,7 +9,7 @@
     </a>
 </div>
 
-<form action="{{ route('posts.search') }}" method="post" class="bg-white">
+<form action="{{ route('farmacias.search') }}" method="post" class="bg-white">
     @csrf
     <div class="max-w-sm my-4 p-1 pr-0 flex items-center">
         <input type="text" name="search" placeholder="Filtrar:" class="flex-1 appearance-none rounded shadow p-3 text-grey-dark mr-2 focus:outline-none">

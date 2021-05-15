@@ -36,7 +36,7 @@
     <tbody>
         @foreach ($produtos as $p)
         <tr>
-        <td></td>
+        <td><img src="{{ url("storage/{$p->imagem}") }}"  alt="{{ $p->descricao }}" style="max-width:100px;" /></td>
         <td>{{$p->descricao}}</td>
         <td>{{$p->preco}}</td>
         <td>{{$p->desconto}}</td>
