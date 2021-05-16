@@ -1,10 +1,15 @@
-@extends('admin.layouts.app')
+@extends('layouts.app')
 
-@section('title','Editar Post')
+@section('title','Farmácias')
 
-<h3>Listagem</h3>
-<hr>
-<a href="{{route('posts.create')}}"> Cadastrar Post</a>
+@section('content')
+
+<div class="max-w-sm my-4 p-1 pr-0 flex items-center">
+    <a href="{{route('posts.create')}}" class="uppercase p-3 rounded bg-blue-500 text-blue-50 max-w-max shadow-sm hover:shadow-lg"> 
+        Cadastrar Post
+    </a>
+</div>
+
 <hr>
 <form action="{{ route('posts.search') }}" method="post" class="bg-white">
     @csrf
@@ -33,3 +38,4 @@
 @else
     {{ $posts->links() }}
 @endif
+@endsection
