@@ -22,7 +22,7 @@ class ProdutoController extends Controller
         $produtos = DB::table('produtos')
             ->join('categorias', 'produtos.categorias_id', '=', 'categorias.id')
             ->select('produtos.*', 'categorias.descricao as desc_categoria')
-            ->paginate(2);
+            ->paginate(5);
 
         return view('admin.produtos.index', [
             'produtos' => $produtos
@@ -116,7 +116,7 @@ class ProdutoController extends Controller
     {
         $filters = $request->except('_token');
 
-        $produtos = Produto::where('descricao', 'LIKE', "%{$request->search}%")->paginate(2);
+        $produtos = Produto::where('descricao', 'LIKE', "%{$request->search}%")->paginate(5);
         
         return view('admin.produtos.index', [
             'produtos' => $produtos

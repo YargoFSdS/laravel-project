@@ -24,10 +24,9 @@ class PostController extends Controller
         return view('admin.posts.create');
     }
 
-    public function store(StoreUpdatePost $request)
+    public function store(Request $request)
     {
         $data = $request->all();
-
         if ($request->image->isValid()) {
 
             $fileName = Str::of($request->title)->slug('-') . '.' .$request->image->getClientOriginalExtension();

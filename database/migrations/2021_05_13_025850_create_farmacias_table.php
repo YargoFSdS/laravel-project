@@ -21,8 +21,8 @@ class CreateFarmaciasTable extends Migration
             $table->string('bairro', 100);
             $table->string('cidade', 100);
             $table->string('estado', 100);
-            $table->string('gerente', 120);
-            $table->string('telefone', 80);
+            $table->string('gerente', 120)->nullable();
+            $table->string('telefone', 80)->nullable();
             $table->double('latitude', 10, 8)->nullable();
             $table->double('longitude', 11, 8)->nullable();
         
