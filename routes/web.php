@@ -3,7 +3,8 @@
 use App\Http\Controllers\{
     PostController,
     FarmaciaController,
-    ProdutoController
+    ProdutoController,
+    SiteController
 };
 use Illuminate\Support\Facades\Route;
 
@@ -36,9 +37,10 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [SiteController::class, 'home'])->name('site.home');
+Route::get('/sobre-nos', [SiteController::class, 'about'])->name('site.about');
+Route::get('/noticias', [SiteController::class, 'posts'])->name('site.posts');
+Route::get('/unidades', [SiteController::class, 'farmacias'])->name('site.unidades');
 
 
 
