@@ -16,7 +16,7 @@
             <div class="pricing-horizontal row col-10 m-auto d-flex shadow-sm rounded overflow-hidden my-5 bg-white">
                 <div class="pricing-horizontal-icon col-md-3 text-center bg-success text-light py-4">
                     <i class="display-1 bx bx-package pt-4"></i>
-                    <h5 class="h5 semi-bold-600 pb-4 light-300">Standard</h5>
+                    <h5 class="h5 semi-bold-600 pb-4 light-300">Unidade</h5>
                 </div>
                 <div class="pricing-horizontal-body offset-lg-1 col-md-5 col-lg-4 d-flex align-items-center pl-5 pt-lg-0 pt-4">
                     <ul class="text-left px-4 list-unstyled mb-0 light-300">

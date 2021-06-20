@@ -6,12 +6,13 @@
     <div id="work_single_banner" class="bg-light w-100">
         <div class="container-fluid text-light d-flex justify-content-center align-items-center border-0 rounded-0 p-0 py-5">
             <div class="banner-content col-lg-8 m-lg-auto text-center py-5 px-3">
-                <h1 class="banner-heading h2 pb-5 typo-space-line-center">Informativo Covid</<h1>
+                <h1 class="banner-heading h2 pb-5 typo-space-line-center" style="color:green;">Informativo Covid</<h1>
                 </h1>
-                <h3 class="h4 pb-2 light-300">Fique por Dentro</h3>
-                <p class="banner-footer light-300">
-                    Estamos vivendo tempos difíceis de bastante incertezas. <br>
+                <h2 class="h4 pb-2 light-300">Fique por Dentro</h2>
+                <p class="banner-footer light-300" style="color:green; font-weight: bold;">
+                    <b> Estamos vivendo tempos difíceis de bastante incertezas. <br>
                     Pensando nisso decidimos criar essa parte para atualizar a todos sobre as novidades descobertas do COVID-19.
+                    </b> 
                 </p>
             </div>
         </div>
@@ -50,8 +51,8 @@
       
 
         <div class="row">
-            <div class="col-md-8 m-auto text-left justify-content-center">
-                <p class="display-6 py-4 ps-4 border border-5 border-top-0 border-end-0 border-bottom-0 border-start">
+            <div class="col-md-8 m-auto">
+                <p class="display-6 py-4 ps-4 border border-5 border-top-0 border-end-0 border-bottom-0 ">
                     <i>
                           {{$post->content}}
                       </i>

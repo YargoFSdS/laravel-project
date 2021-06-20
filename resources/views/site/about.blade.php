@@ -35,7 +35,7 @@
 
             <div class="col-lg-9 row">
                 <div class="team-member col-md-4">
-                    <img class="team-member-img img-fluid rounded-circle p-4" src="./assets/img/team-01.jfif" alt="Card image">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{{ url("/assets/img/vitor.jpg") }}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
                         <li>Vitor Siqueira</li>
                         <li>Desenvolvedor</li>
@@ -44,7 +44,7 @@
                 <div class="team-member col-md-4">
                 </div>
                 <div class="team-member col-md-4">
-                    <img class="team-member-img img-fluid rounded-circle p-4" src="./assets/img/VITOR.jfif" alt="Card image">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="{{ url("/assets/img/THOMAZ.png") }}" alt="Card image">
                     <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
                         <li>Thomaz Benevento</li>
                         <li>SEO</li>
@@ -59,26 +59,16 @@
     <!-- Start Our Partner -->
     <section class="bg-success py-3">
         <div class="container py-5">
-            <h2 class="h2 text-white text-center py-5">Nosso Time</h2>
+            <h2 class="h2 text-white text-center py-5">Nossos Parceiros</h2>
             <div class="row text-center">
-                <div class="col-md-3 mb-3">
+                <div class="col-md-6 mb-6">
                     <div class="card partner-wap py-5">
-                        <a href="#"><i class='display-1 text-white bx bxs-buildings'></i></a>
+                        <a target="_blank"  href="https://drogariastamoio.com.br/"> <img style="width:200px; height:200px;" src="{{ url("/assets/img/tamoio.png") }}" ></a>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3">
+                <div class="col-md-6 mb-6">
                     <div class="card partner-wap py-5">
-                        <a href="#"><i class='display-1 bx text-white bxs-check-shield bx-lg'></i></a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card partner-wap py-5">
-                        <a href="#"><i class='display-1 text-white bx bxs-bolt-circle'></i></a>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <div class="card partner-wap py-5">
-                        <a href="#"><i class='display-1 text-white bx bxs-spa'></i></a>
+                        <a target="_blank" href="https://estacio.br/"> <img style="width:200px; height:200px;" src="{{ url("/assets/img/estacio.png") }}" ></a>
                     </div>
                 </div>
             </div>

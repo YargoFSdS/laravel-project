@@ -41,6 +41,8 @@ Route::get('/', [SiteController::class, 'home'])->name('site.home');
 Route::get('/sobre-nos', [SiteController::class, 'about'])->name('site.about');
 Route::get('/noticias', [SiteController::class, 'posts'])->name('site.posts');
 Route::get('/unidades', [SiteController::class, 'farmacias'])->name('site.unidades');
+Route::get('/catalogo', [SiteController::class, 'catalogo'])->name('site.catalogo');
+Route::post('/buscar', [SiteController::class, 'search'])->name('site.search');
 
 
 

@@ -50,7 +50,7 @@ https://templatemo.com/tm-561-purple-buzz
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{route('site.unidades')}}">Unidades</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="pricing.html">Produtos</a>
+                            <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{route('site.catalogo')}}">Produtos</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn-outline-primary rounded-pill px-3" href="{{route('site.posts')}}">Notícias</a>
