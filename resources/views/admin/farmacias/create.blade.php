@@ -64,7 +64,7 @@
               </div>
 
               <div class="grid grid-cols-3 gap-6">
-                <div class="col-span-3 sm:col-span-2">
+                <div class="col-span-3 sm:col-span-2" style="display:none;">
                   <label for="bairro" class="block text-sm font-medium text-gray-700">
                     Geolocalização
                   </label>
@@ -77,13 +77,13 @@
                 </div>
                 <div class="col-span-3 sm:col-span-1">
                     <label for="bairro" class="block text-sm font-medium text-gray-700">
-                        Contato
+                        Informações de Funcionamento
                     </label>
                     <div class="mt-1 flex rounded-md shadow-sm">
-                        <input type="text" name="gerente" id="gerente" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Gerente">
+                        <input type="text" name="gerente" id="gerente" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Horário de Funcionamento">
                     </div>
                     <div class="mt-1 flex rounded-md shadow-sm">
-                      <input type="text" name="telefone" id="telefone" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Telefone">
+                      <input type="text" name="telefone" id="telefone" class="focus:ring-indigo-500 focus:border-indigo-500 flex-1 block w-full rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Possui Delivery">
                   </div>
                 </div>
               </div>

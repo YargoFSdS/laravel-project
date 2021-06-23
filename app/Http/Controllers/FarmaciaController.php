@@ -13,7 +13,7 @@ class FarmaciaController extends Controller
      */
     public function index()
     {
-        $farmacias = Farmacia::orderBy('id','DESC')->paginate(2);
+        $farmacias = Farmacia::orderBy('id','DESC')->paginate(5);
         return view('admin.farmacias.index', [
             'farmacias' => $farmacias
         ]);
@@ -94,7 +94,7 @@ class FarmaciaController extends Controller
     {
         $filters = $request->except('_token');
 
-        $farmacias = Farmacia::where('filial', 'LIKE', "%{$request->search}%")->paginate(2);
+        $farmacias = Farmacia::where('filial', 'LIKE', "%{$request->search}%")->paginate(20);
 
         return view('admin.farmacias.index', [
             'farmacias' => $farmacias

@@ -32,7 +32,7 @@
         <div class="row justify-content-center pb-4">
             <div class="col-lg-8">
                 <div id="templatemo-slide-link-target" class="card mb-3">
-                    <img class="img-fluid border rounded" src="{{ url("storage/{$post->image}") }}"  alt="{{ $post->title }}" >
+                    <img style="width:800px; height:400px;" class="img-fluid border rounded" src="{{ url("storage/{$post->image}") }}"  alt="{{ $post->title }}" >
                 </div>
                 <div class="worksingle-slide-footer row">
 

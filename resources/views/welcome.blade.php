@@ -27,7 +27,6 @@
                                 </h3>
 
                           </p>
-                          <a href="https://api.whatsapp.com/send/?phone=5521994007971&text&app_absent=0" class="btn btn-success rounded-pill btn-block shadow px-4 py-2 text-white" >Whatsapp</a>
 
                         </div>
                     </div>
@@ -114,7 +113,7 @@
                 <p class="light-300">Entre em contato através do Whatsapp.</p>
             </div>
             <div class="col-lg-3 col-12 pt-4">
-                <a href="https://api.whatsapp.com/send/?phone=5521994007971&text&app_absent=0" class="btn btn-success rounded-pill btn-block shadow px-4 py-2 text-white" >Clique Aqui</a>
+                <a href="https://api.whatsapp.com/send/?phone=5521974511346&text&app_absent=0" class="btn btn-success rounded-pill btn-block shadow px-4 py-2 text-white" >Whatsapp</a>
             </div>
         </div>
     </div>
